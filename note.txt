@@ -1,0 +1,38 @@
+CRUD operation 
+Create - 
+Read - 
+Update - 
+Delete - 
+
+
+HTTP Method 
+    GET - Read 
+    POST - Create 
+    PUT - Update 
+    DELETE - Delete 
+
+ Relational Database stores data in a structured form. Rows and columns. And it uses SQL to Query the Database.
+ Examples of Relational Database are PostgreSQL, MySQL e.t.columns
+
+ Non Relational Database stores data in a flexible form. like documents or key-value pairs.
+ Examples of non-relational database is MongoDb, crouchDb, Amazon DynamoDb e.t.c 
+
+ MongoDb Atlas - Online (Internet)
+ MongoDb Compass- Local 
+
+
+MVC
+Model - Define the structure of database 
+      - It is used to talk to the database
+
+View  - This is the user sees. i.e, HTML, CSS of Frontend templates or frameworks.
+Controller - It handles requests and decides what to do. It is what connects what the user sees and the database.
+URI - Uniform Resource identifier 
+
+Autentication and Autorization
+
+Relationship in backend simply means how 2 or more pieces of data are connected
+Examples
+A user can have many posts 
+A post can have one user and one post 
+A post can have many comments
