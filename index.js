@@ -15,6 +15,7 @@ const port = process.env.PORT || 3500;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const MONGODB_URL = process.env.MONGODB_URI
+import cors from "cors";
 
 mongoose
   .connect(MONGODB_URL)
@@ -27,6 +28,9 @@ mongoose
 app.use(cookieParser());
 app.use(e.json());
 app.use(e.urlencoded({ extended: true }));
+app.use(cors({
+origin: "http://localhost:5173", // Adjust this to your frontend URL
+}));
 
 app.use(e.static("./box"));
 
@@ -110,3 +114,4 @@ app.listen(port, () => {
   console.log(`server is runninng on port : ${port}`);
   // console.log("server is running on port " + port)
 });
+
