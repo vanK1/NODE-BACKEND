@@ -34,7 +34,7 @@ const getAllPosts = async (req, res) => {
         select: "comment"
     }).populate({
         path: "author",
-        select: "fullname"
+        select: "fullname email"
     });
 
     if (!myPosts) {
@@ -48,7 +48,7 @@ const get1post = async (req,res)=>{
 
     const onePost = await Post.findById(id).populate({
       path:"author",
-      select:"firstname lastname"
+      select:"fullname email"
     })
 
     if (!onePost) return res.status(404).json ({message:"No post found"});
