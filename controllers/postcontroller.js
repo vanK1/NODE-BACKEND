@@ -5,13 +5,13 @@ const createPost = async (req, res) => {
   try {
     const { title, snippet, content } = req.body;
 
-    if (!title || !snippet || !content || !req.file) {
+    if (!title || !snippet || !content) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
     const image = {
-      url: req.file.path,
-      filename: req.file.filename
+      url: req.file?.path,
+      filename: req.file?.filename
     };
 
     const newPost = await Post.create({
@@ -22,7 +22,7 @@ const createPost = async (req, res) => {
       author: req.user.id
     });
 
-    res.status(201).json({ message: "Post created successfully" });
+    res.status(201).json({ message: "Post created successfully", newPost });
   } catch (error) {
     res.status(500).json({ message: "Error creating post", error });
   }
