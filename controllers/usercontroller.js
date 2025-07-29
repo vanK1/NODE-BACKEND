@@ -86,8 +86,10 @@ const forlogin = async (req, res) => {
 
   res.cookie("token", token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    maxAge: 3 * 60 * 60 * 1000, // 3 hours
+    secure: true,
+    sameSite: "none", // Prevent CSRF attacks
+    // secure: process.env.NODE_ENV === "production",
+    maxAge: 3 * 60 * 60 * 1000 // 3 hours
   });
 
   res.status(200).json({ message: "Login successful" });
