@@ -86,8 +86,8 @@ const forlogin = async (req, res) => {
 
   res.cookie("token", token, {
     httpOnly: true,
-    secure: true,
-    sameSite: "none", // Prevent CSRF attacks
+    secure: false,
+    sameSite: "lax", // Prevent CSRF attacks
     // secure: process.env.NODE_ENV === "production",
     maxAge: 3 * 60 * 60 * 1000 // 3 hours
   });
