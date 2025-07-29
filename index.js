@@ -29,7 +29,8 @@ app.use(cookieParser());
 app.use(e.json());
 app.use(e.urlencoded({ extended: true }));
 app.use(cors({
-origin: "http://localhost:5173", // Adjust this to your frontend URL
+    origin: "http://localhost:5173", // Adjust this to your frontend URL
+    credentials: true, // Allow cookies to be sent with requests
 }));
 
 app.use(e.static("./box"));

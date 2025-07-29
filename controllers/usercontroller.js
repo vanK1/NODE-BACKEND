@@ -93,6 +93,11 @@ const forlogin = async (req, res) => {
   res.status(200).json({ message: "Login successful" });
 };
 
+let forlogout = (req, res) => {
+  res.clearCookie("token");
+  res.status(200).json({ message: "Logout successful" });
+};
+
 const getAllUsers = async (req, res) => {
   const myUsers = await User.find();
 
@@ -133,4 +138,4 @@ const update1user = async (req, res) => {
   res.status(200).json({ message: "User updated successfuly", updatedUser });
 };
 
-export { getAllUsers, get1user, del1user, update1user, forsignup, forlogin };
+export { getAllUsers, get1user, del1user, update1user, forsignup, forlogin, forlogout };
