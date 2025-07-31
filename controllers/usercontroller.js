@@ -27,24 +27,22 @@ const forsignup = async (req, res) => {
 
     const welcomeMail = `
     <div style="font-family: Arial, sans-serif; background-color: #ffffff;">
-    <div style=" padding: 10px; text-align: center;">
+    <div style=" padding: 10px; color: #333333;">
+    <div style="text-align: center;">
       <h1 style="color: #333333; height: 50px; width: 100%;">Welcome to Our Platform, ${fullname}!</h1>
       <img src="https://res.cloudinary.com/dresbq8tp/image/upload/v1752754492/blog_pictures/qelt2dquxjmigbhh8ywe.png" width="100px; height: 100px;" />
     </div>
-      <ul style="background-color: #008080; padding: 20px; border-radius: 5px;">
+
         <li>We're glad to have you with us.</li>
         <li>Explore our features and enjoy your stay.</li>
-      </ul>
-      <div style="background-color: #003366; padding: 10px; border-radius: 5px; color: #ffffff;">
+      
       <p>Thank you for registering. We are excited to have you on board.</p>
-      <p>To get started, you can:</p>
-      </div>
-      <ul style="background-color: #008080; padding: 20px; border-radius: 5px;">
+      <p>To get started, you can:</p>  
+      
         <li>Complete your profile</li>
         <li>Explore our documentation</li>
         <li>Join our community forums</li>
-      </ul>
-      <div style="background-color: #003366; padding: 10px; border-radius: 5px; color: #ffffff;">
+     
       <p>If you have any questions, feel free to reach out.</p>
       <p>Best regards,</p>
       <p>The Team</p>
